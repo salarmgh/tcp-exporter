@@ -5,6 +5,6 @@ services:
     build: .
     restart: always
     environment:
-      - HOST_ADDR=172.16.17.10:8082
+      - HOST_ADDR=IP:PORT
     ports:
       - 8283:8283

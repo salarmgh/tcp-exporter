@@ -4,10 +4,6 @@ RUN mkdir /go/src/api_exporter
 
 COPY [".", "/go/src/api_exporter"]
 
-ENV https_proxy="http://Guys:EscapeIran@178.128.164.255:7777" \
-    http_proxy="http://Guys:EscapeIran@178.128.164.255:7777"
-    
-
 RUN cd /go/src/api_exporter/ && go get && CGO_ENABLED=0 go build -o /api_exporter
 
 FROM busybox:1.28.4 as api_exporter
