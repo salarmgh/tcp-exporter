@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  api-exporter:
+    build: .
+    restart: always
+    environment:
+      - HOST_ADDR=172.16.17.10:8082
+    ports:
+      - 8283:8283
